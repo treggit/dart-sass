@@ -77,7 +77,7 @@ body::before {
   }
 }
 
-/// A [SassException] that's also a [MultiSpanSassException].
+/// A [SassException] that's also a [MultiSourceSpanException].
 class MultiSpanSassException extends SassException
     implements MultiSourceSpanException {
   final String primaryLabel;

@@ -625,7 +625,7 @@ class _SerializeVisitor
     if (needsParens) _buffer.writeCharCode($rparen);
   }
 
-  void visitNull(SassNull value) {
+  void visitNull() {
     if (_inspect) _buffer.write("null");
   }
 
