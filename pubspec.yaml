@@ -1,5 +1,5 @@
 name: sass
-version: 1.28.0
+version: 1.29.1-dev
 description: A Sass implementation in Dart.
 author: Sass Team
 homepage: https://github.com/sass/dart-sass
@@ -17,7 +17,7 @@ dependencies:
   charcode: "^1.1.0"
   cli_repl: ">=0.1.3 <0.3.0"
   collection: "^1.8.0"
-  meta: "^1.3.0-nullsafety.6"
+  meta: "^1.2.4"
   node_interop: "^1.1.0"
   js: "^0.6.0"
   package_resolver: "^1.0.0"
@@ -45,5 +45,7 @@ dev_dependencies:
   stream_channel: ">=1.0.0 <3.0.0"
   test_descriptor: "^1.1.0"
   test_process: "^1.0.0-rc.1"
-  test: ">=0.12.42 <2.0.0"
+  # TODO(nweiz): Allow higher versions of test once dart-lang/test#1382 is
+  # fixed.
+  test: ">=0.12.42 <1.15.5"
   yaml: "^2.0.0"

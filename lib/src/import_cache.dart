@@ -5,7 +5,7 @@
 // DO NOT EDIT. This file was generated from async_import_cache.dart.
 // See tool/grind/synchronize.dart for details.
 //
-// Checksum: 5293a11e290c86829547ddd982ee3b1b1536dc73
+// Checksum: ac91c195e290010a7e104f832a00a5ebb41a127a
 //
 // ignore_for_file: unused_import
 
@@ -162,6 +162,7 @@ Relative canonical URLs are deprecated and will eventually be disallowed.
         baseImporter: baseImporter, baseUrl: baseUrl, forImport: forImport);
     if (tuple == null) return null;
     var stylesheet = importCanonical(tuple.item1, tuple.item2, tuple.item3);
+    if (stylesheet == null) return null;
     return Tuple2(tuple.item1, stylesheet);
   }
 

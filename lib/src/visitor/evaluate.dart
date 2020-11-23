@@ -5,7 +5,7 @@
 // DO NOT EDIT. This file was generated from async_evaluate.dart.
 // See tool/grind/synchronize.dart for details.
 //
-// Checksum: 6418ba6416a923ff197ce365173f89c6d58011b9
+// Checksum: 55d410a86f32ae21840c27b14dc26eca7f3dcfcc
 //
 // ignore_for_file: unused_import
 
@@ -970,7 +970,7 @@ class _EvaluateVisitor
       };
     }
 
-    if (query.excludesMedia) {
+    if (_mediaQueries != null && query.excludesName('media')) {
       var innerScope = scope;
       scope = (callback) => _withMediaQueries(null, () => innerScope(callback));
     }
@@ -1797,6 +1797,11 @@ class _EvaluateVisitor
     } else if (condition is SupportsDeclaration) {
       return "(${_evaluateToCss(condition.name)}: "
           "${_evaluateToCss(condition.value)})";
+    } else if (condition is SupportsFunction) {
+      return "${_performInterpolation(condition.name)}("
+          "${_performInterpolation(condition.arguments)})";
+    } else if (condition is SupportsAnything) {
+      return "(${_performInterpolation(condition.contents)})";
     } else {
       return null;
     }
