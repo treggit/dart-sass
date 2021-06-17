@@ -10,6 +10,9 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+    
+permissions:
+  issues: read|write|none
 
 jobs:
   build:
